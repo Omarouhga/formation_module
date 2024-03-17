@@ -1,0 +1,30 @@
+<odoo>
+    <record id="view_product_template_form_inherit" model="ir.ui.view">
+        <field name="name">product.template.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <!-- Ajoutez ou modifiez les champs selon vos besoins -->
+            <xpath expr="//page[@name='general_information']" position="after">
+                <page name="formation" string="Formation" >
+                    <group>
+                        <field name="programme"/>
+                        <field name="presentation"/>
+                        <field name="condition"/>
+                        <field name="tarifs"/>
+                    </group>
+                </page>
+            </xpath>
+            
+
+            <xpath expr="//div[@name='options']" position="inside">
+               
+                <span class="d-inline-block">
+                    <field name="is_formation" field_id="is_formation_0"/>
+                    <label for="is_formation"/>
+                </span>
+            </xpath>
+            
+        </field>
+    </record>
+</odoo>

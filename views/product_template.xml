@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="targetup_website_sale_product" inherit_id="website_sale.product">
+        <xpath expr="//div[@id='product_detail_main']" position="inside"> 
+            <!-- Ajoutez vos champs supplémentaires ici -->
+            <h1>Présentaion</h1>
+            <p t-field="product.presentation"/>
+            <h1>Programme</h1>
+            <p t-field="product.programme"/>
+            <h1>Condition d'admission</h1>
+            <p t-field="product.condition"/>
+            <h1>Tarifs</h1>
+            <p t-field="product.tarifs"/>
+
+        </xpath>
+        <xpath expr="//div[@id='add_to_cart_wrap']" position="replace"> 
+            <div id="inscription">
+                <a data-animation-selector=".o_wsale_product_images" role="button" id="inscription" t-attf-class="btn btn-primary  a-submit flex-grow-1" href="#">
+                    <i class="fa fa-shopping-cart me-2"/>
+                    M'INSCRIRE Á LA FORMATION               
+                 </a>
+            </div>
+
+        </xpath>
+        
+    </template>
+</odoo>
