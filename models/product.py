@@ -8,5 +8,5 @@ class ProductTemplate(models.Model):
     presentation = fields.Html(string='Présentation')
     condition = fields.Html(string='Conditions d\'admission')
     tarifs = fields.Html(string='Tarifs de formation')
-    is_formation=fields.Boolean(string='Formation ?')
+    is_formation=fields.Boolean(string='Formation ?' )
 

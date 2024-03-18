@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="targetup_website_sale_product" inherit_id="website_sale.product">
-        <xpath expr="//div[@id='product_detail_main']" position="inside"> 
+        <xpath invisible="not is_formation"  expr="//div[@id='product_detail_main']" position="inside"> 
             <!-- Ajoutez vos champs supplémentaires ici -->
+            <t t-if="product.is_formation">
             <h1>Présentaion</h1>
             <p t-field="product.presentation"/>
             <h1>Programme</h1>
@@ -11,7 +12,7 @@
             <p t-field="product.condition"/>
             <h1>Tarifs</h1>
             <p t-field="product.tarifs"/>
-
+            </t>
         </xpath>
         <xpath expr="//div[@id='add_to_cart_wrap']" position="replace"> 
             <div id="inscription">

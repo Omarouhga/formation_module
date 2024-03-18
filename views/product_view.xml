@@ -5,8 +5,8 @@
         <field name="inherit_id" ref="product.product_template_only_form_view"/>
         <field name="arch" type="xml">
             <!-- Ajoutez ou modifiez les champs selon vos besoins -->
-            <xpath expr="//page[@name='general_information']" position="after">
-                <page name="formation" string="Formation" >
+            <xpath     expr="//page[@name='general_information']"  position="after">
+                <page  invisible="not is_formation" name="formation" string="Formation" >
                     <group>
                         <field name="programme"/>
                         <field name="presentation"/>
