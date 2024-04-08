@@ -1,29 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="targetup_website_sale_product" inherit_id="website_sale.product">
-        <xpath expr="//div[@id='product_detail_main']" position="inside"> 
-            <!-- Ajoutez vos champs supplémentaires ici -->
-            <t t-if="product.formation_or_service=='formation'">
-            <h1>Présentaion</h1>
-            <p t-field="product.presentation"/>
-            <h1>Programme</h1>
-            <p t-field="product.programme"/>
-            <h1>Condition d'admission</h1>
-            <p t-field="product.condition"/>
-            <h1>Les débouchés</h1>
-            <p t-field="product.debouche"/>
-            <h1>Modalités de réalisation</h1>
-            <p t-field="product.tarifs"/>
-            </t>
-            <t t-elif="product.formation_or_service=='service'">
-                <h1>Avantage</h1>
-                <p t-field="product.presentation"/>
-                <h1>Programme d'accompagnement</h1>
-                <p t-field="product.programme"/>
-                <h1>Problème qu'il résout</h1>
-                <p t-field="product.condition"/>
-               
-            </t>
+        <xpath expr="//div[@t-field='product.description_ecommerce']" position="after"> 
+            <section class="s_tabs pt48 pb48 o_colored_level" data-vcss="001" data-snippet="s_tabs" data-name="Tabulations" style="background-image: none;">
+                <div class="container">
+                    <div class="s_tabs_main">
+                        <div class="s_tabs_nav mb-3">
+                            <ul class="nav nav-pills justify-content-center nav-justified" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active o_default_snippet_text" id="nav_tabs_link_1712163976423_37" data-bs-toggle="tab" href="#nav_tabs_content_1712163976423_37" role="tab" aria-controls="nav_tabs_content_1712163976423_37" aria-selected="true"><t/>Programme </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link o_default_snippet_text" id="nav_tabs_link_1712163976423_38" data-bs-toggle="tab" href="#nav_tabs_content_1712163976423_38" role="tab" aria-controls="nav_tabs_content_1712163976423_38" aria-selected="false">Objectifs </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link o_default_snippet_text" id="nav_tabs_link_1712163976424_39" data-bs-toggle="tab" href="#nav_tabs_content_1712163976424_39" role="tab" aria-controls="nav_tabs_content_1712163976424_39" aria-selected="false">Conditions d'accés</a>
+                                </li>
+                                 <t t-if="product.formation_or_service=='formation' ">
+                                       
+                                     <li class="nav-item">
+                                    <a class="nav-link o_default_snippet_text" id="nav_tabs_link_1712163976424_40" data-bs-toggle="tab" href="#nav_tabs_content_1712163976424_40" role="tab" aria-controls="nav_tabs_content_1712163976424_40" aria-selected="false">Modalités de réalisation</a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link o_default_snippet_text" id="nav_tabs_link_1712163976424_41" data-bs-toggle="tab" href="#nav_tabs_content_1712163976424_41" role="tab" aria-controls="nav_tabs_content_1712163976424_41" aria-selected="false">Les débouchés</a>
+                                </li>
+                                    </t>
+                            </ul>
+                        </div>
+                        <div class="s_tabs_content tab-content">
+                            <div class="tab-pane fade show active" id="nav_tabs_content_1712163976423_37" role="tabpanel" aria-labelledby="nav_tabs_link_1712163976423_37">
+                                <div class="oe_structure oe_empty" data-editor-message-default="true" data-editor-message="GLISSEZ UN BLOC ICI">
+                                   
+                                    <section class="s_text_block" style="background-image: none;" data-name="xcxc">
+                                        <div class="container s_allow_columns">
+                                        <t t-if="product.formation_or_service=='formation'or 'service'">
+                                             <p t-field="product.programme" class="o_default_snippet_text">Écrivez un ou deux paragraphes décrivant votre produit ou vos services.</p>
+                                        </t>
+                                        
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav_tabs_content_1712163976423_38" role="tabpanel" aria-labelledby="nav_tabs_link_1712163976423_38">
+                                <div class="oe_structure oe_empty" data-editor-message-default="true" data-editor-message="GLISSEZ UN BLOC ICI">
+                                    <section class="s_text_block" style="background-image: none;" data-name="xcxc">
+                                        <div class="container s_allow_columns">
+                                        <t t-if="product.formation_or_service=='formation'or 'service'">
+                                             <p t-field="product.presentation" class="o_default_snippet_text">Écrivez un ou deux paragraphes décrivant votre produit ou vos services.</p>
+                                        </t>                                </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav_tabs_content_1712163976424_39" role="tabpanel" aria-labelledby="nav_tabs_link_1712163976424_39">
+                                <div class="oe_structure oe_empty" data-editor-message-default="true" data-editor-message="GLISSEZ UN BLOC ICI">
+                                    <section class="s_text_block" style="background-image: none;" data-name="xcxc">
+                                        <div class="container s_allow_columns">
+                                         <t t-if="product.formation_or_service=='formation'or 'service'">
+                                             <p t-field="product.condition" class="o_default_snippet_text">Écrivez un ou deux paragraphes décrivant votre produit ou vos services.</p>
+                                        </t>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav_tabs_content_1712163976424_42" role="tabpanel" aria-labelledby="nav_tabs_link_1712163976424_42">
+                                <div class="oe_structure oe_empty" data-editor-message-default="true" data-editor-message="GLISSEZ UN BLOC ICI">
+                                    <section class="s_text_block" style="background-image: none;" data-name="xcxc">
+                                        <div class="container s_allow_columns">
+                                         <t t-if="product.formation_or_service=='formation'or 'service'">
+                                             <p t-field="product.condition" class="o_default_snippet_text">Écrivez un ou deux paragraphes décrivant votre produit ou vos services.</p>
+                                        </t>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                      <t t-if="product.formation_or_service=='formation'">
+                           <div class="tab-pane fade" id="nav_tabs_content_1712163976424_40" role="tabpanel" aria-labelledby="nav_tabs_link_1712163976424_40">
+                                <div class="oe_structure oe_empty" data-editor-message-default="true" data-editor-message="GLISSEZ UN BLOC ICI">
+                                    <section class="s_text_block" style="background-image: none;" data-name="xcxc">
+                                        <div class="container s_allow_columns">
+                                             <p t-field="product.tarifs" class="o_default_snippet_text">Écrivez un ou deux paragraphes décrivant votre produit ou vos services.</p>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane fade" id="nav_tabs_content_1712163976424_41" role="tabpanel" aria-labelledby="nav_tabs_link_1712163976424_41">
+                                <div class="oe_structure oe_empty" data-editor-message-default="true" data-editor-message="GLISSEZ UN BLOC ICI">
+                                    <section class="s_text_block" style="background-image: none;" data-name="xcxc">
+                                        <div class="container s_allow_columns">
+                                             <p t-field="product.debouche" class="o_default_snippet_text">Écrivez un ou deux paragraphes décrivant votre produit ou vos services.</p>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                          </t>
+        
+                        </div>
+                    </div>
+                </div>
+            </section>
+          
         </xpath>
         
         <!-- <xpath expr="//div[@id='add_to_cart_wrap']" position="replace"> 

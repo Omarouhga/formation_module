@@ -17,6 +17,7 @@
                 </page>
                 <page   invisible=" formation_or_service!='service'" name="service" string="Service" >
                     <group>
+                        <field  string="Descriptif" name="descriptif"/>
                         <field  string="programme d'accompagnement" name="programme_acompagnement"/>
                         <field string="Avantages"  name="avantages"/>
                         <field string="Problème qu'il résout" name="probleme_resout"/>

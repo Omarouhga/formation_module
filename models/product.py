@@ -10,7 +10,7 @@ class ProductTemplatnn(models.Model):
     tarifs = fields.Html(string='Modalités de réalisation')
     debouche = fields.Html(string='Les débouchés')
 
-
+    descriptif=fields.Html(string='Descriptif')
     avantages = fields.Html(string='Avantages')
     programme_acompagnement = fields.Html(string='Programme d\'acompagnement ')
     probleme_resout = fields.Html(string='Problème qu\il résout')
