@@ -6,22 +6,31 @@
         <field name="arch" type="xml">
             <!-- Ajoutez ou modifiez les champs selon vos besoins -->
             <xpath     expr="//page[@name='general_information']"  position="after">
-                <page  invisible="not is_formation" name="formation" string="Formation" >
+                <page  invisible=" formation_or_service!='formation'" name="formation" string="Formation" >
                     <group>
                         <field name="programme"/>
                         <field name="presentation"/>
                         <field name="condition"/>
                         <field name="tarifs"/>
+                        <field name="debouche"/>
                     </group>
                 </page>
+                <page   invisible=" formation_or_service!='service'" name="service" string="Service" >
+                    <group>
+                        <field  string="programme d'accompagnement" name="programme_acompagnement"/>
+                        <field string="Avantages"  name="avantages"/>
+                        <field string="Problème qu'il résout" name="probleme_resout"/>
+                    </group>
+                </page>
+                
             </xpath>
             
 
             <xpath expr="//div[@name='options']" position="inside">
                
+               
                 <span class="d-inline-block">
-                    <field name="is_formation" field_id="is_formation_0"/>
-                    <label for="is_formation"/>
+                    <field name="formation_or_service" widget="radio" />
                 </span>
             </xpath>
             

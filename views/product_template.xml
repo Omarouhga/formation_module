@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="targetup_website_sale_product" inherit_id="website_sale.product">
-        <xpath invisible="not is_formation"  expr="//div[@id='product_detail_main']" position="inside"> 
+        <xpath expr="//div[@id='product_detail_main']" position="inside"> 
             <!-- Ajoutez vos champs supplémentaires ici -->
-            <t t-if="product.is_formation">
+            <t t-if="product.formation_or_service=='formation'">
             <h1>Présentaion</h1>
             <p t-field="product.presentation"/>
             <h1>Programme</h1>
             <p t-field="product.programme"/>
             <h1>Condition d'admission</h1>
             <p t-field="product.condition"/>
-            <h1>Tarifs</h1>
+            <h1>Les débouchés</h1>
+            <p t-field="product.debouche"/>
+            <h1>Modalités de réalisation</h1>
             <p t-field="product.tarifs"/>
             </t>
+            <t t-elif="product.formation_or_service=='service'">
+                <h1>Avantage</h1>
+                <p t-field="product.presentation"/>
+                <h1>Programme d'accompagnement</h1>
+                <p t-field="product.programme"/>
+                <h1>Problème qu'il résout</h1>
+                <p t-field="product.condition"/>
+               
+            </t>
         </xpath>
+        
         <xpath expr="//div[@id='add_to_cart_wrap']" position="replace"> 
             <div id="inscription">
                 <a data-animation-selector=".o_wsale_product_images" role="button" id="inscription" t-attf-class="btn btn-primary  a-submit flex-grow-1" href="#">

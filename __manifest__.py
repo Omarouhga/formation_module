@@ -7,9 +7,9 @@
     'author': 'omar ouhagua',
     'application': False,
     'data': [
-        # 'views/product_view.xml',
+        'views/product_view.xml',
         # 'views/product_template.xml',
-        'views/contract_view.xml'
+     'views/contract_view.xml'
 
     ],
     'installable': True,
