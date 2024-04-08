@@ -26,13 +26,13 @@
             </t>
         </xpath>
         
-        <xpath expr="//div[@id='add_to_cart_wrap']" position="replace"> 
+        <!-- <xpath expr="//div[@id='add_to_cart_wrap']" position="replace"> 
             <div id="inscription">
                 <a data-animation-selector=".o_wsale_product_images" role="button" id="inscription" t-attf-class="btn btn-primary  a-submit flex-grow-1" href="#">
                     <i class="fa fa-shopping-cart me-2"/>
                     M'INSCRIRE Á LA FORMATION               
                  </a>
-            </div>
+            </div> -->
 
         </xpath>
         
