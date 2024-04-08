@@ -11,7 +11,7 @@
                         <field name="programme"/>
                         <field name="presentation"/>
                         <field name="condition"/>
-                        <field name="tarifs"/>
+                        <field name="modalite"/>
                         <field name="debouche"/>
                     </group>
                 </page>

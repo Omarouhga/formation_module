@@ -7,7 +7,7 @@ class ProductTemplatnn(models.Model):
     programme = fields.Html(string='Programme de la formation')
     presentation = fields.Html(string='Objectifs de la formation')
     condition = fields.Html(string='Conditions d\'accés')
-    tarifs = fields.Html(string='Modalités de réalisation')
+    modalite = fields.Html(string='Modalités de réalisation')
     debouche = fields.Html(string='Les débouchés')
 
     descriptif=fields.Html(string='Descriptif')
