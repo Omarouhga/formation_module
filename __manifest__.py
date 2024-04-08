@@ -8,7 +8,7 @@
     'application': False,
     'data': [
         'views/product_view.xml',
-        'views/product_template.xml',
+        # 'views/product_template.xml',
      'views/contract_view.xml'
 
     ],
