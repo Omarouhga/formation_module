@@ -3,7 +3,7 @@
     <template id="targetup_website_sale_product" inherit_id="website_sale.product">
         <xpath expr="//section[@id='product_detail']" position="inside"> 
             <t t-if="product.formation_or_service=='service' or product.formation_or_service=='formation' ">
-                <section class="s_tabs pt48 pb48 o_colored_level" data-vcss="001" data-snippet="s_tabs" data-name="Tabulations" style="background-image: none;">
+                <section class="s_tabs pt48 pb48 o_colored_level" style="background-color: #F3F2F2;" data-vcss="001" data-snippet="s_tabs" data-name="Tabulations" style="background-image: none;">
     <div class="container">
         <div class="s_tabs_main">
             <div class="s_tabs_nav mb-3">
