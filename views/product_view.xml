@@ -8,6 +8,7 @@
             <xpath     expr="//page[@name='general_information']"  position="after">
                 <page  invisible=" formation_or_service!='formation'" name="formation" string="Formation" >
                     <group>
+                        <field  string="Descriptif" name="descriptif"/>
                         <field name="programme"/>
                         <field name="presentation"/>
                         <field name="condition"/>
