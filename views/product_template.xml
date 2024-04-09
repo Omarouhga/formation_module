@@ -3,11 +3,11 @@
     <template id="targetup_website_sale_product" inherit_id="website_sale.product">
         <xpath expr="//section[@id='product_detail']" position="inside"> 
             <t t-if="product.formation_or_service=='service' or product.formation_or_service=='formation' ">
-                <section class="s_tabs pt48 pb48 o_colored_level" data-vcss="001" data-snippet="s_tabs" data-name="Tabulations" style="background-image: none; background-color: #F3F2F2;">
+                <section class="s_tabs pt48 pb48 o_colored_level" data-vcss="001" data-snippet="s_tabs" data-name="Tabulations" style="background-image: none;">
     <div class="container">
         <div class="s_tabs_main">
             <div class="s_tabs_nav mb-3">
-                <ul class="fw-bold nav nav-pills justify-content-between nav-justified" role="tablist">
+                <ul style="background-color: #F3F2F2;" class="fw-bold nav nav-pills justify-content-between nav-justified" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active o_default_snippet_text" id="nav_tabs_link_1712163976423_37" data-bs-toggle="tab" href="#nav_tabs_content_1712163976423_37" role="tab" aria-controls="nav_tabs_content_1712163976423_37" aria-selected="true"><t t-if="product.formation_or_service=='formation'">Programme de Formation </t> <t t-elif="product.formation_or_service=='service'">Programme d'accompagnement</t></a>
                     </li>
