@@ -104,7 +104,232 @@
             </div>
         </div>
     </div>
-</section></t>
+</section>
+<section class="s_title pt40 pb40 o_colored_level" data-vcss="001" data-snippet="s_title" data-name="Titre" style="background-image: none;">
+    <div class="s_allow_columns o_container_small">
+        <h2 style="text-align: center;">Formulair​e&amp;nbsp;<u><font style="color: rgb(255, 0, 0);">d'inscription</font></u></h2><section class="s_website_form pt16 pb16" data-vcss="001" data-snippet="s_website_form" data-name="Formulaire">
+    <div class="container">
+        <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-pre-fill="true" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you">
+            <div class="s_website_form_rows row s_col_no_bgcolor">
+                <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="char">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ogmhgxg89dys">
+                            <span class="s_website_form_label_content">Votre nom</span><span class="s_website_form_mark"> *</span></label>
+                            <div class="col-sm"><input class="form-control s_website_form_input" type="text" name="contact_name" required="1" data-fill-with="name" id="ogmhgxg89dys"/>
+                            </div>
+                    </div>
+                </div>
+                <div data-name="Field" class="s_website_form_field mb-3 col-12" data-type="text">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="phone_indicatif">
+                            <span class="s_website_form_label_content">Numéro de téléphone</span>
+                        </label>
+                        <div class="col-sm-2">
+                            <select class="form-select s_website_form_input" data-fill-with="phone" name="phone_indicatif" id="phone_indicatif">
+                                <optgroup label="Afrique">
+                                    <option value="+27">+27 (Afrique du Sud)</option>
+                                    <option value="+213">+213 (Algérie)</option>
+                                    <option value="+244">+244 (Angola)</option>
+                                    <option value="+229">+229 (Bénin)</option>
+                                    <option value="+267">+267 (Botswana)</option>
+                                    <option value="+226">+226 (Burkina Faso)</option>
+                                    <option value="+257">+257 (Burundi)</option>
+                                    <option value="+237">+237 (Cameroun)</option>
+                                    <option value="+238">+238 (Cap-Vert)</option>
+                                    <option value="+236">+236 (République centrafricaine)</option>
+                                    <option value="+269">+269 (Comores)</option>
+                                    <option value="+242">+242 (République du Congo)</option>
+                                    <option value="+243">+243 (République démocratique du Congo)</option>
+                                    <option value="+225">+225 (Côte d'Ivoire)</option>
+                                    <option value="+253">+253 (Djibouti)</option>
+                                    <option value="+20">+20 (Égypte)</option>
+                                    <option value="+291">+291 (Érythrée)</option>
+                                    <option value="+251">+251 (Éthiopie)</option>
+                                    <option value="+268">+268 (Eswatini)</option>
+                                    <option value="+241">+241 (Gabon)</option>
+                                    <option value="+220">+220 (Gambie)</option>
+                                    <option value="+233">+233 (Ghana)</option>
+                                    <option value="+224">+224 (Guinée)</option>
+                                    <option value="+245">+245 (Guinée-Bissau)</option>
+                                    <option value="+240">+240 (Guinée équatoriale)</option>
+                                    <option value="+254">+254 (Kenya)</option>
+                                    <option value="+266">+266 (Lesotho)</option>
+                                    <option value="+231">+231 (Liberia)</option>
+                                    <option value="+218">+218 (Libye)</option>
+                                    <option value="+261">+261 (Madagascar)</option>
+                                    <option value="+265">+265 (Malawi)</option>
+                                    <option value="+223">+223 (Mali)</option>
+                                    <option value="+212">+212 (Maroc)</option>
+                                    <option value="+230">+230 (Maurice)</option>
+                                    <option value="+222">+222 (Mauritanie)</option>
+                                    <option value="+258">+258 (Mozambique)</option>
+                                    <option value="+264">+264 (Namibie)</option>
+                                    <option value="+227">+227 (Niger)</option>
+                                    <option value="+234">+234 (Nigeria)</option>
+                                    <option value="+256">+256 (Ouganda)</option>
+                                    <option value="+250">+250 (Rwanda)</option>
+                                    <option value="+239">+239 (Sao Tomé-et-Principe)</option>
+                                    <option value="+221">+221 (Sénégal)</option>
+                                    <option value="+248">+248 (Seychelles)</option>
+                                    <option value="+232">+232 (Sierra Leone)</option>
+                                    <option value="+252">+252 (Somalie)</option>
+                                    <option value="+249">+249 (Soudan)</option>
+                                    <option value="+211">+211 (Soudan du Sud)</option>
+                                    <option value="+255">+255 (Tanzanie)</option>
+                                    <option value="+235">+235 (Tchad)</option>
+                                    <option value="+228">+228 (Togo)</option>
+                                    <option value="+216">+216 (Tunisie)</option>
+                                    <option value="+260">+260 (Zambie)</option>
+                                    <option value="+263">+263 (Zimbabwe)</option>
+                                </optgroup>
+                                <optgroup label="Amérique du Nord et Antilles">
+                                    <option value="+1 268">+1 268 (Antigua-et-Barbuda)</option>
+                                    <option value="+297">+297 (Aruba)</option>
+                                    <option value="+1 242">+1 242 (Bahamas)</option>
+                                    <option value="+1 246">+1 246 (Barbade)</option>
+                                    <option value="+1">+1 (Canada, République dominicaine, États-Unis, Porto Rico)</option>
+                                    <option value="+53">+53 (Cuba)</option>
+                                    <option value="+1 767">+1 767 (Dominique)</option>
+                                    <option value="+299">+299 (Groenland)</option>
+                                    <option value="+509">+509 (Haïti)</option>
+                                    <option value="+1 876">+1 876 (Jamaïque)</option>
+                                    <option value="+52">+52 (Mexique)</option>
+                                    <option value="+1 869">+1 869 (Saint-Christophe-et-Niévès)</option>
+                                    <option value="+1 758">+1 758 (Sainte-Lucie)</option>
+                                    <option value="+1 784">+1 784 (Saint-Vincent-et-les-Grenadines)</option>
+                                    <option value="+1 868">+1 868 (Trinité-et-Tobago)</option>
+                                </optgroup>
+                                <optgroup label="Amérique du Sud">
+                                    <option value="+54">+54 (Argentine)</option>
+                                    <option value="+501">+501 (Belize)</option>
+                                    <option value="+591">+591 (Bolivie)</option>
+                                    <option value="+55">+55 (Brésil)</option>
+                                    <option value="+56">+56 (Chili)</option>
+                                    <option value="+57">+57 (Colombie)</option>
+                                    <option value="+506">+506 (Costa Rica)</option>
+                                    <option value="+593">+593 (Équateur)</option>
+                                    <option value="+1 473">+1 473 (Grenade)</option>
+                                    <option value="+502">+502 (Guatemala)</option>
+                                    <option value="+592">+592 (Guyana)</option>
+                                    <option value="+504">+504 (Honduras)</option>
+                                    <option value="+505">+505 (Nicaragua)</option>
+                                    <option value="+507">+507 (Panama)</option>
+                                    <option value="+595">+595 (Paraguay)</option>
+                                    <option value="+51">+51 (Pérou)</option>
+                                    <option value="+503">+503 (Salvador)</option>
+                                    <option value="+597">+597 (Suriname)</option>
+                                    <option value="+598">+598 (Uruguay)</option>
+                                    <option value="+58">+58 (Venezuela)</option>
+                                </optgroup>
+                                <optgroup label="Asie">
+                                    <option value="+93">+93 (Afghanistan)</option>
+                                    <option value="+966">+966 (Arabie saoudite)</option>
+                                    <option value="+374">+374 (Arménie)</option>
+                                    <option value="+994">+994 (Azerbaïdjan)</option>
+                                    <option value="+973">+973 (Bahreïn)</option>
+                                    <option value="+880">+880 (Bangladesh)</option>
+                                    <option value="+975">+975 (Bhoutan)</option>
+                                    <option value="+95">+95 (Birmanie)</option>
+                                    <option value="+673">+673 (Brunei)</option>
+                                    <option value="+855">+855 (Cambodge)</option>
+                                    <option value="+86">+86 (Chine)</option>
+                                    <option value="+850">+850 (Corée du Nord)</option>
+                                    <option value="+82">+82 (Corée du Sud)</option>
+                                    <option value="+971">+971 (Émirats arabes unis)</option>
+                                    <option value="+995">+995 (Géorgie)</option>
+                                    <option value="+852">+852 (Hong Kong)</option>
+                                    <option value="+91">+91 (Inde)</option>
+                                    <option value="+62">+62 (Indonésie)</option>
+                                    <option value="+964">+964 (Irak)</option>
+                                    <option value="+98">+98 (Iran)</option>
+                                    <option value="972">972 (Israël)</option>
+                                    <option value="+81">+81 (Japon)</option>
+                                    <option value="+962">+962 (Jordanie)</option>
+                                    <option value="+7">+7 (Kazakhstan)</option>
+                                    <option value="+996">+996 (Kirghizistan)</option>
+                                    <option value="+965">+965 (Koweït)</option>
+                                    <option value="+856">+856 (Laos)</option>
+                                    <option value="+961">+961 (Liban)</option>
+                                    <option value="+60">+60 (Malaisie)</option>
+                                    <option value="+960">+960 (Maldives)</option>
+                                    <option value="+976">+976 (Mongolie)</option>
+                                    <option value="+977">+977 (Népal)</option>
+                                    <option value="+968">+968 (Oman)</option>
+                                    <option value="+998">+998 (Ouzbékistan)</option>
+                                    <option value="+92">+92 (Pakistan)</option>
+                                    <option value="+63">+63 (Philippines)</option>
+                                    <option value="+974">+974 (Qatar)</option>
+                                    <option value="+65">+65 (Singapour)</option>
+                                    <option value="+94">+94 (Sri Lanka)</option>
+                                    <option value="+963">+963 (Syrie)</option>
+                                    <option value="+886">+886 (Taïwan)</option>
+                                    <option value="+992">+992 (Tadjikistan)</option>
+                                    <option value="+66">+66 (Thaïlande)</option>
+                                    <option value="+670">+670 (Timor oriental)</option>
+                                    <option value="+993">+993 (Turkménistan)</option>
+                                    <option value="+90">+90 (Turquie)</option>
+                                    <option value="+84">+84 (Viêt Nam)</option>
+                                    <option value="+967">+967 (Yémen)</option>
+                                </optgroup>
+                            <optgroup label="l'Océanie">
+                                <option value="+61">+61 (Australie)</option>
+                                <option value="+679">+679 (Fidji)</option>
+                                <option value="+686">+686 (Kiribati)</option>
+                                <option value="+692">+692 (Îles Marshall)</option>
+                                <option value="+691">+691 (États fédérés de Micronésie)</option>
+                                <option value="+674">+674 (Nauru)</option>
+                                <option value="+64">+64 (Nouvelle-Zélande)</option>
+                                <option value="+680">+680 (Palaos)</option>
+                                <option value="+675">+675 (Papouasie-Nouvelle-Guinée)</option>
+                                <option value="+677">+677 (Îles Salomon)</option>
+                                <option value="+685">+685 (Samoa)</option>
+                                <option value="+676">+676 (Tonga)</option>
+                                <option value="+688">+688 (Tuvalu)</option>
+                                <option value="+678">+678 (Vanuatu)</option>
+                            </optgroup>
+                            </select>
+                        </div>
+                        <div class="col-sm">
+                            <input class="form-control s_website_form_input" type="text" name="phone_numero" id="phone_numero"/>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- <div data-name="Field" class="s_website_form_field mb-3 col-12" data-type="tel">
+                    <div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ojzmkq8p87m"><span class="s_website_form_label_content">Numéro de téléphone</span></label>
+                        <div class="col-sm"><input class="form-control s_website_form_input" type="tel" name="phone" data-fill-with="phone" id="ojzmkq8p87m"/>
+                        </div>
+                    </div>
+                </div> -->
+                <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="email"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="owv427bly8j"><span class="s_website_form_label_content">Votre email</span><span class="s_website_form_mark"> *</span></label>
+                    <div class="col-sm"><input class="form-control s_website_form_input" type="email" name="email_from" required="1" data-fill-with="email" id="owv427bly8j"/>
+                    </div></div>
+                </div>
+                <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="oynzwkxqqp6h"><span class="s_website_form_label_content">Votre société</span><span class="s_website_form_mark">   *</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="partner_name" required="1" placeholder="" id="oynzwkxqqp6h" data-fill-with="commercial_company_name"/></div></div></div><div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="many2one"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="o02trtyyzkw1z"><span class="s_website_form_label_content">Secteur d'activité</span></label><div class="col-sm"><select class="form-select s_website_form_input" style="display: none" name="Secteur d&amp;apos;activité" id="o02trtyyzkw1z"><option value="Agriculture">Agriculture</option><option value="Option 2">Option 2</option><option value="Option 3">Option 3</option></select><div id="editable_select" class="form-control s_website_form_input"><div data-empty-value="&lt;aucune valeur&gt;" id="Agriculture" class="s_website_form_select_item selected">Agriculture</div><div data-empty-value="&lt;aucune valeur&gt;" id="Option 2" class="s_website_form_select_item">Option 2</div><div data-empty-value="&lt;aucune valeur&gt;" id="Option 3" class="s_website_form_select_item">Option 3</div></div></div></div></div><div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ojkxghd49ubj"><span class="s_website_form_label_content">Votre Fonction</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="Votre Fonction" id="ojkxghd49ubj"/></div></div></div><div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="many2one"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ol75cr845pz"><span class="s_website_form_label_content">Taille de l'entreprise</span></label><div class="col-sm"><select class="form-select s_website_form_input" style="display: none" name="Taille de l&amp;apos;entreprise" id="ol75cr845pz"><option value="Option 1">Option 1</option><option value="Option 2">Option 2</option><option value="Option 3">Option 3</option></select><div id="editable_select" class="form-control s_website_form_input"><div data-empty-value="&lt;aucune valeur&gt;" id="Option 1" class="s_website_form_select_item">Option 1</div><div data-empty-value="&lt;aucune valeur&gt;" id="Option 2" class="s_website_form_select_item">Option 2</div><div data-empty-value="&lt;aucune valeur&gt;" id="Option 3" class="s_website_form_select_item">Option 3</div></div></div></div></div>
+                <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_model_required s_website_form_field_hidden" data-type="char">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ov0kreuoqdfn">
+                            <span class="s_website_form_label_content">Sujet</span><span class="s_website_form_mark"> *</span></label>
+                        <div class="col-sm"><input class="form-control s_website_form_input" type="text" name="name" required=""
+                            t-att-value="product.name" 
+                            id="ov0kreuoqdfn"/></div>
+                    </div>
+                </div>
+                        
+                        <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="text"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="owhxguanaudl"><span class="s_website_form_label_content">Description de besoin</span><span class="s_website_form_mark">   *</span></label><div class="col-sm"><textarea class="form-control s_website_form_input" name="description" required="1" placeholder="" id="owhxguanaudl" rows="3"/></div></div></div><div class="mb-0 py-2 col-12 s_website_form_submit" data-name="Submit Button">
+                    <div style="width: 200px;" class="s_website_form_label"/>
+                    <a href="#" role="button" class="btn btn-primary s_website_form_send o_default_snippet_text" data-bs-original-title="" title="">Contacter un expert</a>
+                    <span id="s_website_form_result"/>
+                <br/></div>
+            </div>
+        </form>
+    </div>
+</section><p style="text-align: center;"><br/></p></div>
+</section>
+
+
+</t>
           
         </xpath>
         

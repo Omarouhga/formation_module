@@ -9,7 +9,8 @@
     'data': [
         'views/product_view.xml',
     'views/product_template.xml',
-     'views/contract_view.xml'
+    #  'views/contract_view.xml',
+    # 'views/indicatif_pays_view.xml'
 
     ],
     'installable': True,
