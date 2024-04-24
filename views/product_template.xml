@@ -306,7 +306,41 @@
                     <div class="col-sm"><input class="form-control s_website_form_input" type="email" name="email_from" required="1" data-fill-with="email" id="owv427bly8j"/>
                     </div></div>
                 </div>
-                <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="oynzwkxqqp6h"><span class="s_website_form_label_content">Votre société</span><span class="s_website_form_mark">   *</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="partner_name" required="1" placeholder="" id="oynzwkxqqp6h" data-fill-with="commercial_company_name"/></div></div></div><div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="many2one"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="o02trtyyzkw1z"><span class="s_website_form_label_content">Secteur d'activité</span></label><div class="col-sm"><select class="form-select s_website_form_input" style="display: none" name="Secteur d&amp;apos;activité" id="o02trtyyzkw1z"><option value="Agriculture">Agriculture</option><option value="Option 2">Option 2</option><option value="Option 3">Option 3</option></select><div id="editable_select" class="form-control s_website_form_input"><div data-empty-value="&lt;aucune valeur&gt;" id="Agriculture" class="s_website_form_select_item selected">Agriculture</div><div data-empty-value="&lt;aucune valeur&gt;" id="Option 2" class="s_website_form_select_item">Option 2</div><div data-empty-value="&lt;aucune valeur&gt;" id="Option 3" class="s_website_form_select_item">Option 3</div></div></div></div></div><div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ojkxghd49ubj"><span class="s_website_form_label_content">Votre Fonction</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="Votre Fonction" id="ojkxghd49ubj"/></div></div></div><div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="many2one"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ol75cr845pz"><span class="s_website_form_label_content">Taille de l'entreprise</span></label><div class="col-sm"><select class="form-select s_website_form_input" style="display: none" name="Taille de l&amp;apos;entreprise" id="ol75cr845pz"><option value="Option 1">Option 1</option><option value="Option 2">Option 2</option><option value="Option 3">Option 3</option></select><div id="editable_select" class="form-control s_website_form_input"><div data-empty-value="&lt;aucune valeur&gt;" id="Option 1" class="s_website_form_select_item">Option 1</div><div data-empty-value="&lt;aucune valeur&gt;" id="Option 2" class="s_website_form_select_item">Option 2</div><div data-empty-value="&lt;aucune valeur&gt;" id="Option 3" class="s_website_form_select_item">Option 3</div></div></div></div></div>
+                <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="oynzwkxqqp6h"><span class="s_website_form_label_content">Votre société</span><span class="s_website_form_mark">   *</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="partner_name" required="1" placeholder="" id="oynzwkxqqp6h" data-fill-with="commercial_company_name"/></div></div></div>
+                <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="many2one">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="secteur_activite"><span class="s_website_form_label_content">Secteur d'activité</span></label>
+                        <div class="col-sm">
+                            <select class="form-select s_website_form_input"  name="secteur_activite" id="secteur_activite">
+                                <option value="Agriculture">Agriculture</option>
+                                <option value="Technologie de l'information">Technologie de l'information</option>
+                                <option value="Santé">Santé</option>
+                                <option value="Éducation">Éducation</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Commerce de détail">Commerce de détail</option>
+                                <option value="Manufacture">Manufacture</option>
+                                <option value="Construction">Construction</option>
+                                <option value="Transport et logistique">Transport et logistique</option>
+                                <option value="Arts et divertissement">Arts et divertissement</option>
+                                <option value="Énergie">Énergie</option>
+                                <option value="Tourisme et hospitalité">Tourisme et hospitalité</option>
+                                <option value="Immobilier">Immobilier</option>
+                                <option value="Gouvernement">Gouvernement</option>
+                                <option value="Services juridiques">Services juridiques</option>
+                                <option value="Alimentation et boissons">Alimentation et boissons</option>
+                                <option value="Télécommunications">Télécommunications</option>
+
+                            </select>
+                            <!-- <div id="editable_select" class="form-control s_website_form_input">
+                                <div data-empty-value="&lt;aucune valeur&gt;" id="Agriculture" class="s_website_form_select_item selected">Agriculture</div>
+                                <div data-empty-value="&lt;aucune valeur&gt;" id="Option 2" class="s_website_form_select_item">Option 2</div>
+                                <div data-empty-value="&lt;aucune valeur&gt;" id="Option 3" class="s_website_form_select_item">Option 3</div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                                <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ojkxghd49ubj"><span class="s_website_form_label_content">Votre Fonction</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="Votre Fonction" id="ojkxghd49ubj"/></div></div></div><div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="many2one"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="taille_entreprise"><span class="s_website_form_label_content">Taille de l'entreprise</span></label><div class="col-sm"><select class="form-select s_website_form_input"  name="taille_entreprise" id="taille_entreprise"><option value="Option 1">Moins de 50 employés</option><option value="Option 2">50-100 Employés</option><option value="Option 3">Plus de 100 employés</option></select>
+</div></div></div>
                 <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_model_required s_website_form_field_hidden" data-type="char">
                     <div class="row s_col_no_resize s_col_no_bgcolor">
                         <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ov0kreuoqdfn">
