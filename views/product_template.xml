@@ -105,11 +105,11 @@
         </div>
     </div>
 </section>
-<section  class="s_title pt40 pb40 o_colored_level" data-vcss="001" data-snippet="s_title" data-name="Titre" style="background-image: none;">
+<section id="target_up_univ_inscription"  class="s_title pt40 pb40 o_colored_level" data-vcss="001" data-snippet="s_title" data-name="Titre" style="background-image: none;">
     <div class="s_allow_columns o_container_small">
         <h2 style="text-align: center;"><t t-if="product.formation_or_service=='formation'">Formulair​e&amp;nbsp;<u><font style="color: rgb(255, 0, 0);">d'inscription</font></u> </t> <t t-elif="product.formation_or_service=='service'">Contacter un&amp;nbsp;<u><font style="color: rgb(255, 0, 0);">Expert</font></u></t></h2><section class="s_website_form pt16 pb16" data-vcss="001" data-snippet="s_website_form" data-name="Formulaire">
     <div class="container">
-        <form id="target_up_univ_inscription" action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-pre-fill="true" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you">
+        <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-pre-fill="true" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you">
             <div class="s_website_form_rows row s_col_no_bgcolor">
                 <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="char">
                     <div class="row s_col_no_resize s_col_no_bgcolor">
