@@ -1,14 +1,14 @@
 <odoo>
     <data>
-        <record id="seq_new_account_move" model="ir.sequence">
-            <field name="name">Sales Order</field>
-            <field name="code">new.sale.order</field>
-            <field name="prefix">FAC%(y)s%(m)s%(d)s/</field>
-            <field name="padding">5</field>
-            <field name="number_increment">1</field>
+        <record id="seq_daily_fac" model="ir.sequence">
+            <field name="name">Daily FAC</field>
+            <field name="code">fac.daily.sequence</field>
+            <field name="prefix">FAC/%(year)s%(month)s/%(day)s/</field>  <!-- Year/Month/Day prefix -->
+            <field name="padding">3</field>  <!-- Numbering with 3 digits (e.g., 001) -->
+            <field name="number_increment">1</field>  <!-- Increment by 1 -->
             <field name="company_id" eval="False"/>
-            <field name="use_date_range">True</field>
-            <field name="date_range_type">daily</field>
-        </record>   
+            <field name="use_date_range">True</field>  <!-- Enable daily reset -->
+            <!-- <field name="date_range_type">daily</field>  Resets every day -->
+        </record>
     </data>
 </odoo>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="targetup_website_sale_product" inherit_id="website_sale.product">
-        <xpath expr="//section[@id='product_detail']" position="inside"> 
+        <xpath expr="//section[@id='product_detail']" invisible="formation_or_service!='formation'" position="inside"> 
             <t t-if="product.formation_or_service=='service' or product.formation_or_service=='formation' ">
                 <section class="s_tabs pt48 pb48 o_colored_level" data-vcss="001" data-snippet="s_tabs" data-name="Tabulations" style="background-image: none;">
     <div class="container">
@@ -107,14 +107,14 @@
 </section>
 <section class="s_title pt40 pb40 o_colored_level" data-vcss="001" data-snippet="s_title" data-name="Titre" style="background-image: none;">
     <div class="s_allow_columns o_container_small">
-        <h2 style="text-align: center;">Formulair​e&amp;nbsp;<u><font style="color: rgb(255, 0, 0);">d'inscription</font></u></h2><section class="s_website_form pt16 pb16" data-vcss="001" data-snippet="s_website_form" data-name="Formulaire">
+        <h2 style="text-align: center;"><t t-if="product.formation_or_service=='formation'">Formulair​e&amp;nbsp;<u><font style="color: rgb(255, 0, 0);">d'inscription</font></u> </t> <t t-elif="product.formation_or_service=='service'">Contacter un&amp;nbsp;<u><font style="color: rgb(255, 0, 0);">Expert</font></u></t></h2><section class="s_website_form pt16 pb16" data-vcss="001" data-snippet="s_website_form" data-name="Formulaire">
     <div class="container">
         <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-pre-fill="true" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you">
             <div class="s_website_form_rows row s_col_no_bgcolor">
                 <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="char">
                     <div class="row s_col_no_resize s_col_no_bgcolor">
                         <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ogmhgxg89dys">
-                            <span class="s_website_form_label_content">Votre nom</span><span class="s_website_form_mark"> *</span></label>
+                            <span class="s_website_form_label_content">Nom Complet</span><span class="s_website_form_mark"> *</span></label>
                             <div class="col-sm"><input class="form-control s_website_form_input" type="text" name="contact_name" required="1" data-fill-with="name" id="ogmhgxg89dys"/>
                             </div>
                     </div>
@@ -306,7 +306,7 @@
                     <div class="col-sm"><input class="form-control s_website_form_input" type="email" name="email_from" required="1" data-fill-with="email" id="owv427bly8j"/>
                     </div></div>
                 </div>
-                <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="oynzwkxqqp6h"><span class="s_website_form_label_content">Votre société</span><span class="s_website_form_mark">   *</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="partner_name" required="1" placeholder="" id="oynzwkxqqp6h" data-fill-with="commercial_company_name"/></div></div></div>
+                <div t-if="product.formation_or_service=='service'" data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="oynzwkxqqp6h"><span class="s_website_form_label_content">Votre société</span><span class="s_website_form_mark">   *</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="partner_name" required="1" placeholder="" id="oynzwkxqqp6h" data-fill-with="commercial_company_name"/></div></div></div>
                 <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="many2one">
                     <div class="row s_col_no_resize s_col_no_bgcolor">
                         <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="secteur_activite"><span class="s_website_form_label_content">Secteur d'activité</span></label>
@@ -339,7 +339,9 @@
                         </div>
                     </div>
                 </div>
-                                <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ojkxghd49ubj"><span class="s_website_form_label_content">Votre Fonction</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="Votre Fonction" id="ojkxghd49ubj"/></div></div></div><div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="many2one"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="taille_entreprise"><span class="s_website_form_label_content">Taille de l'entreprise</span></label><div class="col-sm"><select class="form-select s_website_form_input"  name="taille_entreprise" id="taille_entreprise"><option value="Option 1">Moins de 50 employés</option><option value="Option 2">50-100 Employés</option><option value="Option 3">Plus de 100 employés</option></select>
+                                <div t-if="product.formation_or_service=='service'"  data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ojkxghd49ubj"><span class="s_website_form_label_content">Votre Fonction</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="Votre Fonction" id="ojkxghd49ubj"/>
+                                </div></div></div>
+                                <div t-if="product.formation_or_service=='service'" data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="many2one"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="taille_entreprise"><span class="s_website_form_label_content">Taille de l'entreprise</span></label><div class="col-sm"><select class="form-select s_website_form_input"  name="taille_entreprise" id="taille_entreprise"><option value="Option 1">Moins de 50 employés</option><option value="Option 2">50-100 Employés</option><option value="Option 3">Plus de 100 employés</option></select>
 </div></div></div>
                 <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_model_required s_website_form_field_hidden" data-type="char">
                     <div class="row s_col_no_resize s_col_no_bgcolor">
@@ -350,16 +352,43 @@
                             id="ov0kreuoqdfn"/></div>
                     </div>
                 </div>
+                <div t-if="product.formation_or_service=='formaion'" data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="char">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="o36095v2mk91">
+                            <span class="s_website_form_label_content">Formation initiale
+                            </span>
+                        </label>
+                        <div class="col-sm">
+                            <input class="form-control s_website_form_input" type="text" name="Formation initiale" placeholder="Technicien spécialisé en gestion des entreprises" id="o36095v2mk91" data-fill-with="commercial_company_name"/>
+                        </div>
+                    </div>
+                </div>
+                <div t-if="product.formation_or_service=='formation'" data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="float">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="orz6ack7c2vb">
+                            <span class="s_website_form_label_content">Nombre d'années d'expérience
+                            </span>
+                        </label>
+                        <div class="col-sm">
+                            <input type="number" class="form-control s_website_form_input" step="any" name="Nombre d&amp;apos;années d&amp;apos;expérience" placeholder="Ex : 2" id="orz6ack7c2vb" data-fill-with="phone"/>
+                        </div>
+                    </div>
+                </div>
                         
-                        <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="text"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="owhxguanaudl"><span class="s_website_form_label_content">Description de besoin</span><span class="s_website_form_mark">   *</span></label><div class="col-sm"><textarea class="form-control s_website_form_input" name="description" required="1" placeholder="" id="owhxguanaudl" rows="3"/></div></div></div><div class="mb-0 py-2 col-12 s_website_form_submit" data-name="Submit Button">
-                    <div style="width: 200px;" class="s_website_form_label"/>
-                    <a href="#" role="button" class="btn btn-primary s_website_form_send o_default_snippet_text" data-bs-original-title="" title="">Contacter un expert</a>
+                        <div t-if="product.formation_or_service=='service'" data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="text"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="owhxguanaudl"><span class="s_website_form_label_content">Description de besoin</span><span class="s_website_form_mark">   *</span></label><div class="col-sm"><textarea class="form-control s_website_form_input" name="description" required="1" placeholder="" id="owhxguanaudl" rows="3"/></div></div></div><div class="mb-0 py-2 col-12 s_website_form_submit" data-name="Submit Button">
+                        </div>
+                           
+
+                            <div style="width: 200px;" class="s_website_form_label"/>
+                    <a href="#" role="button" class="btn btn-primary s_website_form_send o_default_snippet_text" data-bs-original-title="" title=""><t t-if="product.formation_or_service=='formation'">S'inscrire </t> <t t-elif="product.formation_or_service=='service'">Contacter un expert</t></a>
                     <span id="s_website_form_result"/>
                 <br/></div>
-            </div>
+           
         </form>
     </div>
-</section><p style="text-align: center;"><br/></p></div>
+  
+</section>
+<p style="text-align: center;"><br/></p></div>
 </section>
 
 
