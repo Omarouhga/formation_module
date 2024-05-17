@@ -307,7 +307,7 @@
                     </div></div>
                 </div>
                 <div t-if="product.formation_or_service=='service'" data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="oynzwkxqqp6h"><span class="s_website_form_label_content">Votre société</span><span class="s_website_form_mark">   *</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="partner_name" required="1" placeholder="" id="oynzwkxqqp6h" data-fill-with="commercial_company_name"/></div></div></div>
-                <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="many2one">
+                <div t-if="product.formation_or_service=='service'" data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="many2one">
                     <div class="row s_col_no_resize s_col_no_bgcolor">
                         <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="secteur_activite"><span class="s_website_form_label_content">Secteur d'activité</span></label>
                         <div class="col-sm">
@@ -352,14 +352,14 @@
                             id="ov0kreuoqdfn"/></div>
                     </div>
                 </div>
-                <div t-if="product.formation_or_service=='formaion'" data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="char">
+                <div t-if="product.formation_or_service=='formation'" data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="char">
                     <div class="row s_col_no_resize s_col_no_bgcolor">
                         <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="o36095v2mk91">
                             <span class="s_website_form_label_content">Formation initiale
                             </span>
                         </label>
                         <div class="col-sm">
-                            <input class="form-control s_website_form_input" type="text" name="Formation initiale" placeholder="Technicien spécialisé en gestion des entreprises" id="o36095v2mk91" data-fill-with="commercial_company_name"/>
+                            <input class="form-control s_website_form_input" type="text" name="Formation initiale" placeholder="Technicien spécialisé en gestion des entreprises" id="o36095v2mk91" />
                         </div>
                     </div>
                 </div>
@@ -370,7 +370,7 @@
                             </span>
                         </label>
                         <div class="col-sm">
-                            <input type="number" class="form-control s_website_form_input" step="any" name="Nombre d&amp;apos;années d&amp;apos;expérience" placeholder="Ex : 2" id="orz6ack7c2vb" data-fill-with="phone"/>
+                            <input type="number" class="form-control s_website_form_input" step="any" name="Nombre d&amp;apos;années d&amp;apos;expérience" placeholder="Ex : 2" id="orz6ack7c2vb" />
                         </div>
                     </div>
                 </div>
