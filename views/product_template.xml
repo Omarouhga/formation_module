@@ -398,7 +398,7 @@
         
         <xpath expr="//div[@id='add_to_cart_wrap']" position="replace"> 
             <div id="fixed-contact-button-wrapper" t-attf-class="{{'d-none' if combination_info['prevent_zero_price_sale'] else 'd-inline-flex'}} d-flex justify-content-between mb-2 me-auto">
-                <a href="#target_up_univ_inscription" t-attf-class="btn w-30 btn-primary a-submit" class="w-30 a-submit btn btn-primary">
+                <a href="www.targetupconsulting.com" t-attf-class="btn w-30 btn-primary a-submit" class="w-30 a-submit btn btn-primary">
                     
                     <t t-if="product.formation_or_service=='formation'">S'inscrire </t> <t t-elif="product.formation_or_service=='service'">Contacter un expert</t>                </a>
             </div>
