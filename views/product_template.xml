@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="targetup_website_sale_product" inherit_id="website_sale.product">
-        <xpath expr="//section[@id='product_detail']" invisible="formation_or_service!='formation'" position="inside"> 
-            
+        <xpath expr="//section[@id='product_detail']" invisible="formation_or_service!='formation'" position="inside">     
             <t t-if="product.formation_or_service=='service' or product.formation_or_service=='formation' ">
                 <section class="s_tabs pt48 pb48 o_colored_level" data-vcss="001" data-snippet="s_tabs" data-name="Tabulations" style="background-image: none;">
     <div class="container">
@@ -127,7 +126,7 @@
         }
     
         // Concatenate indicatifPaye with phone
-        var updatedPhone = indicatifPaye + ' ' phone;
+        var updatedPhone = indicatifPaye + ' ' +phone;
         form.querySelector("[name='phone']").value = updatedPhone;
     
         // Confirm submission
@@ -164,7 +163,7 @@
                             <span class="s_website_form_label_content">Numéro de téléphone</span>
                         </label>
                         <div class="col-sm-2">
-                            <select class="form-control s_website_form_input" type="text" name="indicatif_paye" placeholder="" id="o9re27i2m1yq" data-fill-with="undefined">
+                            <select class="form-control s_website_form_input" type="text" name="indicatif_paye" placeholder="" id="phone_indicatif" data-fill-with="undefined">
                                 <optgroup label="Afrique">
                                     <option value="+27">+27 (Afrique du Sud)</option>
                                     <option value="+213">+213 (Algérie)</option>
@@ -370,15 +369,11 @@
                                 <option value="Télécommunications">Télécommunications</option>
 
                             </select>
-                            <!-- <div id="editable_select" class="form-control s_website_form_input">
-                                <div data-empty-value="&lt;aucune valeur&gt;" id="Agriculture" class="s_website_form_select_item selected">Agriculture</div>
-                                <div data-empty-value="&lt;aucune valeur&gt;" id="Option 2" class="s_website_form_select_item">Option 2</div>
-                                <div data-empty-value="&lt;aucune valeur&gt;" id="Option 3" class="s_website_form_select_item">Option 3</div>
-                            </div> -->
+                           
                         </div>
                     </div>
                 </div>
-                                <div t-if="product.formation_or_service=='service'"  data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ojkxghd49ubj"><span class="s_website_form_label_content">Votre Fonction</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="function" placeholder="" id="oto99t7km0g" data-fill-with="function"/>
+                                <div t-if="product.formation_or_service=='service'"  data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="oto99t7km0g"><span class="s_website_form_label_content">Votre Fonction</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="function" placeholder="" id="oto99t7km0g" data-fill-with="function"/>
                                 </div></div></div>
                                 <div t-if="product.formation_or_service=='service'" data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="many2one"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="taille_entreprise"><span class="s_website_form_label_content">Taille de l'entreprise</span></label><div class="col-sm"><select class="form-select s_website_form_input" type="text" name="taille_entreprise" placeholder=""  data-fill-with="undefined"   id="taille_entreprise"><option value="Moins de 50 employés">Moins de 50 employés</option><option value="50-100 Employés">50-100 Employés</option><option value="Plus de 100 employés">Plus de 100 employés</option></select>
 </div></div></div>
