@@ -1,0 +1,26 @@
+<odoo>
+        <!-- Inherit the CRM lead form view -->
+        <record id="view_crm_lead_form_targetup" model="ir.ui.view">
+            <field name="name">crm.lead.form.targetup</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='function']" position="after">
+                    <field invisible="1" string="Indicatif" name="indicatif_paye"/>
+                </xpath>
+                <xpath expr="//field[@name='team_id']" position="after">
+                    <field invisible="type_lead=='formation'" name="secteur_activite"/>
+                    <field  invisible="type_lead=='formation'" name="taille_entreprise"/>
+                    <field invisible="type_lead=='service'" name="nombre_experience"/>
+                    <field invisible="type_lead=='service'"  name="formation_intirial"/>
+                </xpath>
+
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <!-- <field  name="secteur_activite"/>
+                    <field  name="taille_entreprise"/> -->
+                    <field  widget="radio" name="type_lead"/>
+                    <!-- <field  name="formation_intirial"/> -->
+                </xpath>
+            </field>
+        </record>
+</odoo>

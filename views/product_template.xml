@@ -2,6 +2,7 @@
 <odoo>
     <template id="targetup_website_sale_product" inherit_id="website_sale.product">
         <xpath expr="//section[@id='product_detail']" invisible="formation_or_service!='formation'" position="inside"> 
+            
             <t t-if="product.formation_or_service=='service' or product.formation_or_service=='formation' ">
                 <section class="s_tabs pt48 pb48 o_colored_level" data-vcss="001" data-snippet="s_tabs" data-name="Tabulations" style="background-image: none;">
     <div class="container">
@@ -105,11 +106,49 @@
         </div>
     </div>
 </section>
+<script>
+    function submitForm() {
+        // Retrieve form elements
+        var form = document.getElementById('crm_lead_form');
+        var indicatifPaye = form.querySelector("[name='indicatif_paye']").value;
+        var phone = form.querySelector("[name='phone']").value;
+    
+        // Perform form validation
+        if (!/^\+?[0-9]+$/.test(indicatifPaye)) {
+            alert("Indicatif Payé must contain only digits and an optional leading '+'.");
+            return false; // Prevent form submission
+            window.location.reload();
+        }
+    
+        if (!/^[0-9]+$/.test(phone)) {
+            alert("Phone must contain only digits.");
+            window.location.reload();
+            return false; // Prevent form submission
+        }
+    
+        // Concatenate indicatifPaye with phone
+        var updatedPhone = indicatifPaye + ' ' phone;
+        form.querySelector("[name='phone']").value = updatedPhone;
+    
+        // Confirm submission
+        var confirmSubmission = confirm("Are you sure you want to submit the form?");
+        if (confirmSubmission) {
+            // Allow form submission
+            return true;
+        } else {
+            // Cancel form submission
+            return false;
+        }
+    }
+      
+</script>
 <section id="target_up_univ_inscription"  class="s_title pt40 pb40 o_colored_level" data-vcss="001" data-snippet="s_title" data-name="Titre" style="background-image: none;">
     <div class="s_allow_columns o_container_small">
         <h2 style="text-align: center;"><t t-if="product.formation_or_service=='formation'">Formulair​e&amp;nbsp;<u><font style="color: rgb(255, 0, 0);">d'inscription</font></u> </t> <t t-elif="product.formation_or_service=='service'">Contacter un&amp;nbsp;<u><font style="color: rgb(255, 0, 0);">Expert</font></u></t></h2><section class="s_website_form pt16 pb16" data-vcss="001" data-snippet="s_website_form" data-name="Formulaire">
     <div class="container">
-        <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-pre-fill="true" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you">
+        <form  action="/website/form/" method="post" enctype="multipart/form-data" id="crm_lead_form" class="o_mark_required" data-mark="*" data-pre-fill="true" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you">
+          
+            
             <div class="s_website_form_rows row s_col_no_bgcolor">
                 <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="char">
                     <div class="row s_col_no_resize s_col_no_bgcolor">
@@ -125,7 +164,7 @@
                             <span class="s_website_form_label_content">Numéro de téléphone</span>
                         </label>
                         <div class="col-sm-2">
-                            <select class="form-select s_website_form_input" data-fill-with="phone" name="phone_indicatif" id="phone_indicatif">
+                            <select class="form-control s_website_form_input" type="text" name="indicatif_paye" placeholder="" id="o9re27i2m1yq" data-fill-with="undefined">
                                 <optgroup label="Afrique">
                                     <option value="+27">+27 (Afrique du Sud)</option>
                                     <option value="+213">+213 (Algérie)</option>
@@ -290,7 +329,7 @@
                             </select>
                         </div>
                         <div class="col-sm">
-                            <input class="form-control s_website_form_input" type="text" name="phone_numero" id="phone_numero"/>
+                            <input type="tel"  data-fill-with="phone"   class="form-control s_website_form_input"  name="phone" id="phone_numero"/>
                         </div>
                     </div>
                 </div>
@@ -311,7 +350,7 @@
                     <div class="row s_col_no_resize s_col_no_bgcolor">
                         <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="secteur_activite"><span class="s_website_form_label_content">Secteur d'activité</span></label>
                         <div class="col-sm">
-                            <select class="form-select s_website_form_input"  name="secteur_activite" id="secteur_activite">
+                            <select class="form-select s_website_form_input" type="text" placeholder=""  data-fill-with="undefined" name="secteur_activite" id="secteur_activite">
                                 <option value="Agriculture">Agriculture</option>
                                 <option value="Technologie de l'information">Technologie de l'information</option>
                                 <option value="Santé">Santé</option>
@@ -339,9 +378,9 @@
                         </div>
                     </div>
                 </div>
-                                <div t-if="product.formation_or_service=='service'"  data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ojkxghd49ubj"><span class="s_website_form_label_content">Votre Fonction</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="Votre Fonction" id="ojkxghd49ubj"/>
+                                <div t-if="product.formation_or_service=='service'"  data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="char"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ojkxghd49ubj"><span class="s_website_form_label_content">Votre Fonction</span></label><div class="col-sm"><input class="form-control s_website_form_input" type="text" name="function" placeholder="" id="oto99t7km0g" data-fill-with="function"/>
                                 </div></div></div>
-                                <div t-if="product.formation_or_service=='service'" data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="many2one"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="taille_entreprise"><span class="s_website_form_label_content">Taille de l'entreprise</span></label><div class="col-sm"><select class="form-select s_website_form_input"  name="taille_entreprise" id="taille_entreprise"><option value="Option 1">Moins de 50 employés</option><option value="Option 2">50-100 Employés</option><option value="Option 3">Plus de 100 employés</option></select>
+                                <div t-if="product.formation_or_service=='service'" data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="many2one"><div class="row s_col_no_resize s_col_no_bgcolor"><label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="taille_entreprise"><span class="s_website_form_label_content">Taille de l'entreprise</span></label><div class="col-sm"><select class="form-select s_website_form_input" type="text" name="taille_entreprise" placeholder=""  data-fill-with="undefined"   id="taille_entreprise"><option value="Moins de 50 employés">Moins de 50 employés</option><option value="50-100 Employés">50-100 Employés</option><option value="Plus de 100 employés">Plus de 100 employés</option></select>
 </div></div></div>
                 <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_model_required s_website_form_field_hidden" data-type="char">
                     <div class="row s_col_no_resize s_col_no_bgcolor">
@@ -380,7 +419,7 @@
                            
 
                             <div style="width: 200px;" class="s_website_form_label"/>
-                    <a href="#" role="button" class="btn btn-primary s_website_form_send o_default_snippet_text" data-bs-original-title="" title=""><t t-if="product.formation_or_service=='formation'">S'inscrire </t> <t t-elif="product.formation_or_service=='service'">Contacter un expert</t></a>
+                    <a onclick="submitForm()" href="#" role="button" class="btn btn-primary s_website_form_send o_default_snippet_text" data-bs-original-title="" title=""><t t-if="product.formation_or_service=='formation'">S'inscrire </t> <t t-elif="product.formation_or_service=='service'">Contacter un expert</t></a>
                     <span id="s_website_form_result"/>
                 <br/></div>
            
