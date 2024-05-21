@@ -129,15 +129,8 @@
         var updatedPhone = indicatifPaye + ' ' +phone;
         form.querySelector("[name='phone']").value = updatedPhone;
     
-        // Confirm submission
-        var confirmSubmission = confirm("Are you sure you want to submit the form?");
-        if (confirmSubmission) {
-            // Allow form submission
-            return true;
-        } else {
-            // Cancel form submission
-            return false;
-        }
+        
+        
     }
       
 </script>

@@ -7,7 +7,7 @@ class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
     type_lead = fields.Selection(string="type d'opportunité", selection=[('service', 'Service'), ('formation', 'Formation')])
-    indicatif_paye = fields.Char(string="Indicatif Payé", onchange='1')
+    indicatif_paye = fields.Char(string="Indicatif Payé")
     secteur_activite  = fields.Char(string="secteur d'activité ")
     taille_entreprise = fields.Char(string="taille de l'entreprise")
     nombre_experience = fields.Integer(string="Nombre d'années d'expérience")
