@@ -9,8 +9,7 @@
     'data': [
         'views/product_view.xml',
     'views/product_template.xml',
-    # 'data/sequence.xml',
-    #'views/contract_view.xml',
+   
     #'views/indicatif_pays_view.xml',
     'views/lead_view_inhereted.xml'
 
