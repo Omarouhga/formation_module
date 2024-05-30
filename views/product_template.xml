@@ -35,6 +35,20 @@
             </div>
             
             <div class="s_tabs_content tab-content">
+                <div class="tab-pane fade" id="nav_tabs_content_1712163976423_38" role="tabpanel" aria-labelledby="nav_tabs_link_1712163976423_38">
+                    <div class="oe_structure oe_empty" data-editor-message-default="true" data-editor-message="GLISSEZ UN BLOC ICI">
+                        <section class="s_text_block" style="background-image: none;" data-name="xcxc">
+                            <div class="container s_allow_columns">
+                           <t t-if="product.formation_or_service=='formation'">
+                                 <p t-field="product.presentation" class="o_default_snippet_text">Écrivez un ou deux paragraphes décrivant votre produit ou vos services.</p>
+                               </t>
+                                <t t-elif="product.formation_or_service=='service'">
+                                    <p t-field="product.avantages" class="o_default_snippet_text">Écrivez un ou deux paragraphes décrivant votre produit ou vos services.</p>
+                                </t>
+                                                         </div>
+                        </section>
+                    </div>
+                </div>
                 <div class="tab-pane fade show active" id="nav_tabs_content_1712163976423_37" role="tabpanel" aria-labelledby="nav_tabs_link_1712163976423_37">
                     <div class="oe_structure oe_empty" data-editor-message-default="true" data-editor-message="GLISSEZ UN BLOC ICI">
                        
@@ -50,20 +64,7 @@
                         </section>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="nav_tabs_content_1712163976423_38" role="tabpanel" aria-labelledby="nav_tabs_link_1712163976423_38">
-                    <div class="oe_structure oe_empty" data-editor-message-default="true" data-editor-message="GLISSEZ UN BLOC ICI">
-                        <section class="s_text_block" style="background-image: none;" data-name="xcxc">
-                            <div class="container s_allow_columns">
-                           <t t-if="product.formation_or_service=='formation'">
-                                 <p t-field="product.presentation" class="o_default_snippet_text">Écrivez un ou deux paragraphes décrivant votre produit ou vos services.</p>
-                               </t>
-                                <t t-elif="product.formation_or_service=='service'">
-                                    <p t-field="product.avantages" class="o_default_snippet_text">Écrivez un ou deux paragraphes décrivant votre produit ou vos services.</p>
-                                </t>
-                                                         </div>
-                        </section>
-                    </div>
-                </div>
+               
             
                 <div class="tab-pane fade" id="nav_tabs_content_1712163976424_39" role="tabpanel" aria-labelledby="nav_tabs_link_1712163976424_39">
                     <div class="oe_structure oe_empty" data-editor-message-default="true" data-editor-message="GLISSEZ UN BLOC ICI">
