@@ -12,7 +12,6 @@
                     <field invisible="type_lead=='formation'" name="secteur_activite"/>
                     <field  invisible="type_lead=='formation'" name="taille_entreprise"/>
                     <field invisible="type_lead=='service'" name="nombre_experience"/>
-                    <field invisible="type_lead=='service'"  name="formation_intirial"/>
                 </xpath>
 
                 <xpath expr="//field[@name='partner_id']" position="after">

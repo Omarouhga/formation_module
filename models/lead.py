@@ -11,7 +11,6 @@ class CrmLead(models.Model):
     secteur_activite  = fields.Char(string="secteur d'activité ")
     taille_entreprise = fields.Char(string="taille de l'entreprise")
     nombre_experience = fields.Integer(string="Nombre d'années d'expérience")
-    formation_intirial=fields.Char('Fromation intnitiale')
 
     
 
