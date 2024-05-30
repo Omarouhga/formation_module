@@ -431,9 +431,7 @@
             </div>
             
         </xpath>
-        <xpath expr="//div[@id='product_details']" position="replace"> 
-           
-        </xpath>
+        
         
     </template>
 </odoo>
