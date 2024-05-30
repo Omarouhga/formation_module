@@ -17,16 +17,16 @@ class CrmLead(models.Model):
 
   
   
-    @api.constrains('indicatif_paye', 'phone')
-    def _check_phone_and_indicatif(self):
-        phone_regex = re.compile(r'^\+?[0-9\s\-]+$')
-        indicatif_regex = re.compile(r'^\+?[0-9]+$')
+    # @api.constrains('indicatif_paye', 'phone')
+    # def _check_phone_and_indicatif(self):
+    #     phone_regex = re.compile(r'^\+?[0-9\s\-]+$')
+    #     indicatif_regex = re.compile(r'^\+?[0-9]+$')
         
-        for record in self:
-            if record.indicatif_paye and not indicatif_regex.match(record.indicatif_paye):
-                raise ValidationError("Indicatif Payé must contain only digits and optional leading '+'.")
-            if record.phone and not phone_regex.match(record.phone):
-                raise ValidationError("Phone must contain only digits, spaces, hyphens, and optional leading '+'.")
+    #     for record in self:
+    #         if record.indicatif_paye and not indicatif_regex.match(record.indicatif_paye):
+    #             raise ValidationError("Indicatif Payé must contain only digits and optional leading '+'.")
+    #         if record.phone and not phone_regex.match(record.phone):
+    #             raise ValidationError("Phone must contain only digits, spaces, hyphens, and optional leading '+'.")
     # def write(self, vals):
     #     if 'indicatif_paye' in vals:
     #         new_indicatif = vals['indicatif_paye']
