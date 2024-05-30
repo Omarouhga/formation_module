@@ -12,7 +12,7 @@
                         <a class="nav-link active o_default_snippet_text" id="nav_tabs_link_1712163976423_37" data-bs-toggle="tab" href="#nav_tabs_content_1712163976423_37" role="tab" aria-controls="nav_tabs_content_1712163976423_37" aria-selected="true"><t t-if="product.formation_or_service=='formation'">Programme de Formation </t> <t t-elif="product.formation_or_service=='service'">Programme d'accompagnement</t></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link o_default_snippet_text" id="nav_tabs_link_1712163976423_38" data-bs-toggle="tab" href="#nav_tabs_content_1712163976423_38" role="tab" aria-controls="nav_tabs_content_1712163976423_38" aria-selected="false"><t t-if="product.formation_or_service=='formation'">Présentation </t> <t t-elif="product.formation_or_service=='service'">Avantages</t> </a>
+                        <a class="nav-link o_default_snippet_text" id="nav_tabs_link_1712163976423_38" data-bs-toggle="tab" href="#nav_tabs_content_1712163976423_38" role="tab" aria-controls="nav_tabs_content_1712163976423_38" aria-selected="false"><t t-if="product.formation_or_service=='formation'">Objectifs de la formation </t> <t t-elif="product.formation_or_service=='service'">Avantages</t> </a>
                     </li>
                     <!--<t t-if="product.formation_or_service=='service' ">-->
                     <!-- <li class="nav-item">-->
